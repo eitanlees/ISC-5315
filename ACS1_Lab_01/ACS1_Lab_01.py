@@ -109,13 +109,10 @@ print('Pandas version: {}'.format(pd.__version__))
 # 
 # When presented with a set of ordinary differential equations one can explore the [phase portrait](https://en.wikipedia.org/wiki/Phase_portrait) to find equilibrium points. Use the following ODE to create a streamline plot and approximately determine the equilibrium points.
 # 
-# $$
-# \frac{dx}{dt} = xy + 3y
-# $$
-# 
-# $$
-# \frac{dy}{dt} = xy - 3x
-# $$
+# \begin{align*}
+# \frac{dx}{dt} &= xy + 3y \\
+# \frac{dy}{dt} &= xy - 3x
+# \end{align*}
 # 
 # Hints: Look up `ax.streamplot()`.
 
@@ -170,13 +167,10 @@ print('Pandas version: {}'.format(pd.__version__))
 # 
 # The curve traced by a point on the rim of a circular wheel as the wheel rolls along a straight line without slippage is known as a [cycloid](https://en.wikipedia.org/wiki/Cycloid). For a circle of radius $r$ the parametric equations for the cycloid are
 # 
-# $$
-# x = r(t - \sin(t))
-# $$
-# 
-# $$
-# y = r(1 - \cos(t))
-# $$
+# \begin{align*}
+# x &= r(t - \sin(t)) \\
+# y &= r(1 - \cos(t))
+# \end{align*}
 # 
 # Make an animation of the line traced out by a cycloid of radius $r=1$ that completes two rotations. Try to include the cycloid point, the line traced out by the point and the circle that creates the cycloid.
 # 

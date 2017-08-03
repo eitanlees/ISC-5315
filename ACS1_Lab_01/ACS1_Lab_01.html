@@ -12040,11 +12040,10 @@ Pandas version: 0.20.3
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="ODE-Streamline">ODE Streamline<a class="anchor-link" href="#ODE-Streamline">&#182;</a></h2><p>When presented with a set of ordinary differential equations one can explore the <a href="https://en.wikipedia.org/wiki/Phase_portrait">phase portrait</a> to find equilibrium points. Use the following ODE to create a streamline plot and approximately determine the equilibrium points.</p>
-$$
-\frac{dx}{dt} = xy + 3y
-$$$$
-\frac{dy}{dt} = xy - 3x
-$$<p>Hints: Look up <code>ax.streamplot()</code>.</p>
+\begin{align*}
+\frac{dx}{dt} &= xy + 3y \\
+\frac{dy}{dt} &= xy - 3x
+\end{align*}<p>Hints: Look up <code>ax.streamplot()</code>.</p>
 
 </div>
 </div>
@@ -12180,11 +12179,10 @@ $$<p>Hints: Look up <code>ax.streamplot()</code>.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Cycloid-Animation">Cycloid Animation<a class="anchor-link" href="#Cycloid-Animation">&#182;</a></h2><p>The curve traced by a point on the rim of a circular wheel as the wheel rolls along a straight line without slippage is known as a <a href="https://en.wikipedia.org/wiki/Cycloid">cycloid</a>. For a circle of radius $r$ the parametric equations for the cycloid are</p>
-$$
-x = r(t - \sin(t))
-$$$$
-y = r(1 - \cos(t))
-$$<p>Make an animation of the line traced out by a cycloid of radius $r=1$ that completes two rotations. Try to include the cycloid point, the line traced out by the point and the circle that creates the cycloid.</p>
+\begin{align*}
+x &= r(t - \sin(t)) \\
+y &= r(1 - \cos(t))
+\end{align*}<p>Make an animation of the line traced out by a cycloid of radius $r=1$ that completes two rotations. Try to include the cycloid point, the line traced out by the point and the circle that creates the cycloid.</p>
 <p>Hints: For given $t$, the circle's centre lies at $x = rt$, $y = r$. Use <code>from matplotlib import animation</code> for the animation.</p>
 
 </div>
