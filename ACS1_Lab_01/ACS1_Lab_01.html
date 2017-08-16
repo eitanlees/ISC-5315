@@ -11835,8 +11835,8 @@ Pandas version: 0.20.3
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="LogLog-Convergence">LogLog Convergence<a class="anchor-link" href="#LogLog-Convergence">&#182;</a></h2><p>Often when running numerical simulations researchers are interested in how the relative error changes as the resolution of our model is adjusted. A <a href="https://en.wikipedia.org/wiki/Rate_of_convergence">rate of convergence</a> can be calculated numerically but it is also often visualized on a loglog plot. The file <code>convergence.csv</code> contains the errors associated with a Forward Euler method, Trapezoidal method, and the spacial resolution used. Plot dx vs error for both runs on a loglog scale. Include a dashed line with the exact slope of $dx^1$ and $dx^2$ to help guide the eye.</p>
-<p>Hints: Use <code>plt.loglog()</code> to create a loglog plot. The equation for a straight line in log space is $y = bx^m$ where $m$ is the slope and $b$ is the y intercept.</p>
+<h2 id="LogLog-Convergence">LogLog Convergence<a class="anchor-link" href="#LogLog-Convergence">&#182;</a></h2><p>Often when running numerical simulations researchers are interested in how the relative error changes as the resolution of our model is adjusted. A <a href="https://en.wikipedia.org/wiki/Rate_of_convergence">rate of convergence</a> can be calculated numerically but it is also often visualized on a loglog plot. The file <code>convergence.csv</code> contains the errors associated with a Forward Euler method, Trapezoidal method, and the spacial resolution used. Plot dx vs error for both runs on a loglog scale. Include a dashed line with the exact slope of $dx^1$ and $dx^2$ to help guide the eye. The y intercept of the guide lines should be adjusted so that they do not overlap the data.</p>
+<p>Hints: An easy way to read in tabular data is using the pandas function <code>pd.read_csv()</code>. Use <code>plt.loglog()</code> to create a loglog plot. The equation for a straight line in log space is $y = bx^m$ where $m$ is the slope and $b$ is the y intercept.</p>
 
 </div>
 </div>
@@ -11853,7 +11853,7 @@ Pandas version: 0.20.3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -11887,7 +11887,7 @@ Pandas version: 0.20.3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -11903,8 +11903,8 @@ Pandas version: 0.20.3
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Anscombe-Subplot">Anscombe Subplot<a class="anchor-link" href="#Anscombe-Subplot">&#182;</a></h2><p>A common task in scientific visualization is creating figures with multiple subplots. A classic dataset to promote the important of visualization is known as the <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe's quartet</a>. All four of the data sets have the same mean, standard deviation, and linear regression fit. If you don't believe me check it out yourself! The file <code>anscombe.csv</code> contains the dataset. Make a single figure with 4 subplots of each xy pair.</p>
-<p>Hints: Look into the <code>subplots()</code> function</p>
+<h2 id="Anscombe-Subplot">Anscombe Subplot<a class="anchor-link" href="#Anscombe-Subplot">&#182;</a></h2><p>A common task in scientific visualization is creating figures with multiple subplots. A classic dataset to promote the importance of visualization is known as the <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe's quartet</a>. All four of the data sets have the same mean, standard deviation, and linear regression fit. If you don't believe me check it out yourself! The file <code>anscombe.csv</code> contains the dataset. Make a single figure with 4 subplots of x1 vs y1, x2 vs y2, ... etc for all xy pairs.</p>
+<p>Hints: Look into the <code>subplots()</code> function. Use <code>plt.tight_layout()</code> to make sure the axis labels don't overlap.</p>
 
 </div>
 </div>
@@ -11921,7 +11921,7 @@ Pandas version: 0.20.3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -11955,7 +11955,7 @@ Pandas version: 0.20.3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -11989,7 +11989,7 @@ Pandas version: 0.20.3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -12005,8 +12005,8 @@ Pandas version: 0.20.3
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Brain-Slice">Brain Slice<a class="anchor-link" href="#Brain-Slice">&#182;</a></h2><p>Data can come in many dimensions. One technique for looking into internal structures of 3D data is to plot a 2D slice along a fixed axis. The file <code>brain.csv</code> contains the data of an average brain taken from MRI's of 152 healthy individuals from the <a href="http://www.mcgill.ca/neuro/neuro-brain-research-patient-care-and-training">Montreal Neurological Institute</a>. The data has been saved as a 1D array and must be reshaped into a (91, 109, 91) array before plotting. Make three images of the x = 47, y = 40, and z = 50 planes.</p>
-<p>Hints: Use <code>plt.imshow()</code> for visualization and <code>cmap='gray'</code> to make the image gray scale. Use <code>np.reshape()</code> to make the data the correct shape.</p>
+<h2 id="Brain-Slice">Brain Slice<a class="anchor-link" href="#Brain-Slice">&#182;</a></h2><p>Data can come in many dimensions. One technique for looking into internal structures of 3D data is to plot a 2D slice along a fixed axis. The file <code>brain.csv</code> contains the intensity data of an average brain taken from MRI scans of 152 healthy individuals from the <a href="http://www.mcgill.ca/neuro/neuro-brain-research-patient-care-and-training">Montreal Neurological Institute</a>. The data has been saved as a 1D array of length (902629) and must be reshaped into a (91, 109, 91) array before plotting. Make three images of the x = 47, y = 40, and z = 50 planes.</p>
+<p>Hints: Use <code>plt.imshow()</code> for visualization and <code>cmap='gray'</code> to make the image gray scale. Read the data in using <code>np.loadtxt()</code> and use <code>np.reshape()</code> to make the data the correct shape.</p>
 
 </div>
 </div>
@@ -12023,7 +12023,7 @@ Pandas version: 0.20.3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -12060,7 +12060,7 @@ Pandas version: 0.20.3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -12076,8 +12076,8 @@ Pandas version: 0.20.3
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Volcano-Contour">Volcano Contour<a class="anchor-link" href="#Volcano-Contour">&#182;</a></h2><p>One way to visualize a 3D surface is with the help of contour maps. The file <code>volcano.csv</code> contains topographic information for Auckland's <a href="https://en.wikipedia.org/wiki/Maungawhau">Maunga Whau Volcano</a> on a 10m by 10m grid. Create a contour map, including labeled contour lines.</p>
-<p>Hints: Use <code>plt.contour()</code> for the plotting and <code>plt.clabel()</code> for the labels</p>
+<h2 id="Volcano-Contour">Volcano Contour<a class="anchor-link" href="#Volcano-Contour">&#182;</a></h2><p>One way to visualize a 3D surface is with the help of contour maps. The file <code>volcano.csv</code> contains topographic information for Auckland's <a href="https://en.wikipedia.org/wiki/Maungawhau">Maunga Whau Volcano</a> on a 870m by 610m grid with height measurements taken every 10m. Create a contour map, including labeled contour lines.</p>
+<p>Hints: Use <code>plt.contourf()</code> and <code>plt.contour()</code> for the plotting and <code>plt.clabel()</code> for the contour labels. Use <code>figsize = (6.1, 8.7)</code> for the dimensions of the figure to avoid warping.</p>
 
 </div>
 </div>
@@ -12094,7 +12094,7 @@ Pandas version: 0.20.3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -12128,7 +12128,7 @@ Pandas version: 0.20.3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -12162,7 +12162,7 @@ Pandas version: 0.20.3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -12200,7 +12200,7 @@ y &= r(1 - \cos(t))
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 

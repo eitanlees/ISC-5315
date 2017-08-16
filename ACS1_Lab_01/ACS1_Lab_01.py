@@ -29,13 +29,13 @@ print('Pandas version: {}'.format(pd.__version__))
 
 # ## LogLog Convergence
 # 
-# Often when running numerical simulations researchers are interested in how the relative error changes as the resolution of our model is adjusted. A [rate of convergence](https://en.wikipedia.org/wiki/Rate_of_convergence) can be calculated numerically but it is also often visualized on a loglog plot. The file `convergence.csv` contains the errors associated with a Forward Euler method, Trapezoidal method, and the spacial resolution used. Plot dx vs error for both runs on a loglog scale. Include a dashed line with the exact slope of $dx^1$ and $dx^2$ to help guide the eye. 
+# Often when running numerical simulations researchers are interested in how the relative error changes as the resolution of our model is adjusted. A [rate of convergence](https://en.wikipedia.org/wiki/Rate_of_convergence) can be calculated numerically but it is also often visualized on a loglog plot. The file `convergence.csv` contains the errors associated with a Forward Euler method, Trapezoidal method, and the spacial resolution used. Plot dx vs error for both runs on a loglog scale. Include a dashed line with the exact slope of $dx^1$ and $dx^2$ to help guide the eye. The y intercept of the guide lines should be adjusted so that they do not overlap the data. 
 # 
-# Hints: Use `plt.loglog()` to create a loglog plot. The equation for a straight line in log space is $y = bx^m$ where $m$ is the slope and $b$ is the y intercept.
+# Hints: An easy way to read in tabular data is using the pandas function `pd.read_csv()`. Use `plt.loglog()` to create a loglog plot. The equation for a straight line in log space is $y = bx^m$ where $m$ is the slope and $b$ is the y intercept.
 
 # **Solution**
 
-# In[2]:
+# In[ ]:
 
 
 
@@ -48,20 +48,20 @@ print('Pandas version: {}'.format(pd.__version__))
 
 # **Solution**
 
-# In[2]:
+# In[ ]:
 
 
 
 
 # ## Anscombe Subplot
 # 
-# A common task in scientific visualization is creating figures with multiple subplots. A classic dataset to promote the important of visualization is known as the [Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet). All four of the data sets have the same mean, standard deviation, and linear regression fit. If you don't believe me check it out yourself! The file `anscombe.csv` contains the dataset. Make a single figure with 4 subplots of each xy pair. 
+# A common task in scientific visualization is creating figures with multiple subplots. A classic dataset to promote the importance of visualization is known as the [Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet). All four of the data sets have the same mean, standard deviation, and linear regression fit. If you don't believe me check it out yourself! The file `anscombe.csv` contains the dataset. Make a single figure with 4 subplots of x1 vs y1, x2 vs y2, ... etc for all xy pairs.
 # 
-# Hints: Look into the `subplots()` function
+# Hints: Look into the `subplots()` function. Use `plt.tight_layout()` to make sure the axis labels don't overlap.
 
 # **Solution**
 
-# In[2]:
+# In[ ]:
 
 
 
@@ -74,7 +74,7 @@ print('Pandas version: {}'.format(pd.__version__))
 
 # **Solution**
 
-# In[2]:
+# In[ ]:
 
 
 
@@ -87,20 +87,20 @@ print('Pandas version: {}'.format(pd.__version__))
 
 # **Solution**
 
-# In[2]:
+# In[ ]:
 
 
 
 
 # ## Brain Slice
 # 
-# Data can come in many dimensions. One technique for looking into internal structures of 3D data is to plot a 2D slice along a fixed axis. The file `brain.csv` contains the data of an average brain taken from MRI's of 152 healthy individuals from the [Montreal Neurological Institute](http://www.mcgill.ca/neuro/neuro-brain-research-patient-care-and-training). The data has been saved as a 1D array and must be reshaped into a (91, 109, 91) array before plotting. Make three images of the x = 47, y = 40, and z = 50 planes. 
+# Data can come in many dimensions. One technique for looking into internal structures of 3D data is to plot a 2D slice along a fixed axis. The file `brain.csv` contains the intensity data of an average brain taken from MRI scans of 152 healthy individuals from the [Montreal Neurological Institute](http://www.mcgill.ca/neuro/neuro-brain-research-patient-care-and-training). The data has been saved as a 1D array of length (902629) and must be reshaped into a (91, 109, 91) array before plotting. Make three images of the x = 47, y = 40, and z = 50 planes. 
 # 
-# Hints: Use `plt.imshow()` for visualization and `cmap='gray'` to make the image gray scale. Use `np.reshape()` to make the data the correct shape.
+# Hints: Use `plt.imshow()` for visualization and `cmap='gray'` to make the image gray scale. Read the data in using `np.loadtxt()` and use `np.reshape()` to make the data the correct shape.
 
 # **Solution**
 
-# In[2]:
+# In[ ]:
 
 
 
@@ -118,20 +118,20 @@ print('Pandas version: {}'.format(pd.__version__))
 
 # **Solution**
 
-# In[2]:
+# In[ ]:
 
 
 
 
 # ## Volcano Contour
 # 
-# One way to visualize a 3D surface is with the help of contour maps. The file `volcano.csv` contains topographic information for Auckland's [Maunga Whau Volcano](https://en.wikipedia.org/wiki/Maungawhau) on a 10m by 10m grid. Create a contour map, including labeled contour lines.
+# One way to visualize a 3D surface is with the help of contour maps. The file `volcano.csv` contains topographic information for Auckland's [Maunga Whau Volcano](https://en.wikipedia.org/wiki/Maungawhau) on a 870m by 610m grid with height measurements taken every 10m. Create a contour map, including labeled contour lines.
 # 
-# Hints: Use `plt.contour()` for the plotting and `plt.clabel()` for the labels
+# Hints: Use `plt.contourf()` and `plt.contour()` for the plotting and `plt.clabel()` for the contour labels. Use `figsize = (6.1, 8.7)` for the dimensions of the figure to avoid warping.
 
 # **Solution**
 
-# In[2]:
+# In[ ]:
 
 
 
@@ -144,7 +144,7 @@ print('Pandas version: {}'.format(pd.__version__))
 
 # **Solution**
 
-# In[2]:
+# In[ ]:
 
 
 
@@ -158,7 +158,7 @@ print('Pandas version: {}'.format(pd.__version__))
 
 # **Solution**
 
-# In[2]:
+# In[ ]:
 
 
 
@@ -178,7 +178,7 @@ print('Pandas version: {}'.format(pd.__version__))
 
 # **Solution**
 
-# In[2]:
+# In[ ]:
 
 
 
